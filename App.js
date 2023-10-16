@@ -12,7 +12,7 @@ function App(){
 
   return (
     <View style={styles.container}>
-      <View style={styles.half}>
+      <View style={[styles.half,styles.upsideDownView]}>
         <Clock gameData={gameData} setGameData={setGameData} bg={"white"} chance={chance} setChance={setChance} setWinner={setWinner}/>
       </View>
 
@@ -33,6 +33,9 @@ const styles = StyleSheet.create({
   },
   half: {
     flex: 1, 
+  },
+  upsideDownView: {
+    transform: [{ rotate: '180deg' }],
   },
 });
 
